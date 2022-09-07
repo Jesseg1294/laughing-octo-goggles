@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://portswigger.net/web-security/hall-of-fame -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <script async="" src="./Hall of Fame - Web Security Academy_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Hall of Fame - Web Security Academy_files/analytics.js.download" nonce=""></script><script type="text/javascript" async="" src="./Hall of Fame - Web Security Academy_files/js" nonce=""></script><script async="" src="./Hall of Fame - Web Security Academy_files/gtm.js.download"></script><script nonce="">
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M4CF4TD');
+    </script>
+
+        
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>Hall of Fame - Web Security Academy</title>
+        <meta name="description" content="Web Security Academy offers tools for learning about web application security, testing &amp; scanning. Learn about a wide range of security tools &amp; identify the very latest vulnerabilities.">
+        
+<script nonce="">
+    const dimensionName = "dimension2";
+    const userRef = "13DBBE7B4255FE81B0734740EC80D3CF";
+</script>
+
+        <!-- Twitter data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hall of Fame - Web Security Academy">
+    <meta name="twitter:description" content="Web Security Academy offers tools for learning about web application security, testing &amp; scanning. Learn about a wide range of security tools &amp; identify the very latest vulnerabilities.">
+<meta name="twitter:image" content="https://portswigger.net/content/images/logos/portswigger-twittercardlogo.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Hall of Fame - Web Security Academy">
+    <meta property="og:description" content="Web Security Academy offers tools for learning about web application security, testing &amp; scanning. Learn about a wide range of security tools &amp; identify the very latest vulnerabilities.">
+<meta property="og:url" content="https://portswigger.net/web-security/hall-of-fame">
+<meta property="og:image" content="https://portswigger.net/content/images/logos/portswigger-twittercardlogo.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://portswigger.net/web-security/hall-of-fame">
+<link rel="icon" href="https://portswigger.net/content/images/logos/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://portswigger.net/content/images/logos/apple-touch-icon.png">
+        <link href="./Hall of Fame - Web Security Academy_files/psacademy.css" rel="stylesheet" type="text/css">
+        <link rel="preload" href="https://portswigger.net/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot" as="font" crossorigin="anonymous">
+<link rel="preload" href="https://portswigger.net/content/fonts/ps-main/ps-icons.woff?l1la2n" as="font" crossorigin="anonymous">
+    </head>
+    <body class="theme-">
+        
+
+
+        <header class="page-header" id="top">
+            <div class="container">
+    <a class="logo" href="https://portswigger.net/"></a>
+    <div class="header-right">
+        <div class="login-buttons">
+                <a class="logout" href="https://portswigger.net/users/logout">Log out</a>
+                <a class="button-orange-small" href="https://portswigger.net/users/youraccount">My account</a>
+        </div>
+
+
+    <input type="checkbox" id="hamburger-mobile" class="hamburger-input-mobile">
+    <input type="radio" id="hamburger-desktop" class="hamburger-input-desktop" name="mega-nav-input">
+    <div class="hamburger-menu-mobile">
+        <label class="hamburger-menu-label header-hidden" for="hamburger-mobile" data-ga-click-label="hamburger-mobile">
+            <span class="hamburger-layers"></span>
+        </label>
+    </div>
+    <div class="mega-nav">
+        <input type="radio" id="mega-nav-close" class="mega-nav-input-close" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-1" class="mega-nav-input-1" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-2" class="mega-nav-input-2" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-6" class="mega-nav-input-6" name="mega-nav-input">
+        <input type="radio" id="mega-nav-label-7" class="mega-nav-input-7" name="mega-nav-input">
+
+        <label for="mega-nav-close" class="mega-nav-close"></label>
+
+        <label class="mega-nav-label mega-nav-label-1" for="mega-nav-label-1" data-ga-click-label="products">
+            <span class="mega-nav-text">Products</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+        <label class="mega-nav-label mega-nav-label-2" for="mega-nav-label-2" data-ga-click-label="solutions">
+            <span class="mega-nav-text">Solutions</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+        <a data-ga-click-label="research" class="mega-nav-link" href="https://portswigger.net/research"><span class="mega-nav-text">Research</span></a>
+        <a data-ga-click-label="academy" class="mega-nav-link" href="https://portswigger.net/web-security"><span class="mega-nav-text">Academy</span></a>
+        <a data-ga-click-label="dailyswig" class="mega-nav-link" href="https://portswigger.net/daily-swig"><span class="mega-nav-text">Daily Swig</span></a>
+        <label data-ga-click-label="support" class="mega-nav-label mega-nav-label-6" for="mega-nav-label-6">
+            <span class="mega-nav-text">Support</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+
+        <label class="mega-nav-label mega-nav-label-7 header-hidden" for="mega-nav-label-7" data-ga-click-label="company">
+            <span class="mega-nav-text">Company</span>
+            <span class="icon-arrow-head-down"></span>
+        </label>
+        <div class="hamburger-menu-desktop">
+            <label class="hamburger-menu-label header-show" for="hamburger-desktop" data-ga-click-label="hamburger-desktop">
+                <span class="hamburger-layers"></span>
+            </label>
+            <div>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-1" href="https://portswigger.net/customers" data-ga-click-label="customers"><span class="mega-nav-text">Customers</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-2" href="https://portswigger.net/burp/how-to-buy" data-ga-click-label="how-to-buy"><span class="mega-nav-text">How to buy</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-3" href="https://portswigger.net/about" data-ga-click-label="about"><span class="mega-nav-text">About</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-4" href="https://portswigger.net/blog" data-ga-click-label="blog"><span class="mega-nav-text">Blog</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-5" href="https://portswigger.net/careers" data-ga-click-label="careers"><span class="mega-nav-text">Careers</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-6" href="https://portswigger.net/legal" data-ga-click-label="legal"><span class="mega-nav-text">Legal</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-7" href="https://portswigger.net/contact" data-ga-click-label="contact"><span class="mega-nav-text">Contact</span></a>
+                <a class="hamburger-menu-desktop-link hamburger-menu-desktop-link-8" href="https://portswigger.net/support/reseller-faqs" data-ga-click-label="contact"><span class="mega-nav-text">Resellers</span></a>
+            </div>
+        </div>
+
+        <a class="mega-nav-link header-hidden" href="https://portswigger.net/users/youraccount" data-ga-click-label="login-mobile"><span class="mega-nav-text">My account</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-1" href="https://portswigger.net/customers" data-ga-click-label="customers"><span class="mega-nav-text">Customers</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-2" href="https://portswigger.net/burp/how-to-buy" data-ga-click-label="how-to-buy"><span class="mega-nav-text">How to buy</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-3" href="https://portswigger.net/about" data-ga-click-label="about"><span class="mega-nav-text">About</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-4" href="https://portswigger.net/blog" data-ga-click-label="blog"><span class="mega-nav-text">Blog</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-5" href="https://portswigger.net/careers" data-ga-click-label="careers"><span class="mega-nav-text">Careers</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-6" href="https://portswigger.net/legal" data-ga-click-label="legal"><span class="mega-nav-text">Legal</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-7" href="https://portswigger.net/contact" data-ga-click-label="contact"><span class="mega-nav-text">Contact</span></a>
+        <a class="hamburger-menu-link hamburger-menu-link-8" href="https://portswigger.net/support/reseller-faqs" data-ga-click-label="contact"><span class="mega-nav-text">Resellers</span></a>
+
+        <div class="mega-nav-container">
+
+            <div class="mega-nav-content mega-nav-content-1">
+                <div class="section-white-medium-no-padding">
+                    <div class="container-columns-66-percent-right">
+                        <div>
+                            <a href="https://portswigger.net/burp/enterprise" class="link-block-white" data-ga-click-label="product-enterprise">
+                                <img src="./Hall of Fame - Web Security Academy_files/enterprise.svg" alt="Burp Suite Enterprise Edition">
+                                <span><strong>Burp Suite Enterprise Edition</strong></span>
+                                <span>The enterprise-enabled dynamic web vulnerability scanner.</span>
+                            </a>
+
+                            <a href="https://portswigger.net/burp/pro" class="link-block-white" data-ga-click-label="product-pro">
+                                <img src="./Hall of Fame - Web Security Academy_files/professional.svg" alt="Burp Suite Professional">
+                                <span><strong>Burp Suite Professional</strong></span>
+                                <span>The world's #1 web penetration testing toolkit.</span>
+                            </a>
+
+                            <a href="https://portswigger.net/burp/communitydownload" class="link-block-white" data-ga-click-label="product-community">
+                                <img src="./Hall of Fame - Web Security Academy_files/community.svg" alt="Burp Suite Community Edition">
+                                <span><strong>Burp Suite Community Edition</strong></span>
+                                <span>The best manual tools to start web security testing.</span>
+                            </a>
+
+                            <a href="https://portswigger.net/burp" class="chevron-after" data-ga-click-label="products-all">View all product editions</a>
+                        </div>
+
+                        <div>
+                            <div class="container-cards-lists-white">
+                                <a href="https://portswigger.net/burp/how-to-buy" data-ga-click-label="feature-how-to-buy-burp-suite">
+                                    <p><strong>How to buy Burp Suite</strong></p>
+                                    <p>Information on ordering, pricing, and more.</p>
+                                    <img src="./Hall of Fame - Web Security Academy_files/tailored-quote.png" alt="Burp Suite Professional vs Burp Suite Enterprise Edition">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mega-nav-content mega-nav-content-2">
+                <div class="section-white-medium-no-padding">
+                    <div class="container-columns-66-percent-right">
+                        <div>
+                            <div class="container-columns">
+                                <a href="https://portswigger.net/solutions" class="link-block-white" data-ga-click-label="solutions-application-testing">
+                                    <span><strong>Application Security Testing</strong></span>
+                                    <span>See how our software enables the world to secure the web.</span>
+                                </a>
+                                <a href="https://portswigger.net/solutions/devsecops" class="link-block-white" data-ga-click-label="solutions-devsecops">
+                                    <span><strong>DevSecOps</strong></span>
+                                    <span>Catch critical bugs; ship more secure software, more quickly.</span>
+                                </a>
+
+                                <a href="https://portswigger.net/solutions/penetration-testing" class="link-block-white" data-ga-click-label="solutions-penetration-testing">
+                                    <span><strong>Penetration Testing</strong></span>
+                                    <span>Accelerate penetration testing - find more bugs, more quickly.</span>
+                                </a>
+                                <a href="https://portswigger.net/solutions/automated-security-testing" class="link-block-white" data-ga-click-label="solutions-automated-penetration-testing">
+                                    <span><strong>Automated Scanning</strong></span>
+                                    <span>Scale dynamic scanning. Reduce risk. Save time/money.</span>
+                                </a>
+
+                                <a href="https://portswigger.net/solutions/bug-bounty-hunting" class="link-block-white" data-ga-click-label="solutions-bug-bounty-software">
+                                    <span><strong>Bug Bounty Hunting</strong></span>
+                                    <span>Level up your hacking and earn more bug bounties.</span>
+                                </a>
+                                <a href="https://portswigger.net/solutions/compliance" class="link-block-white" data-ga-click-label="solutions-compliance">
+                                    <span><strong>Compliance</strong></span>
+                                    <span>Enhance security monitoring to comply with confidence.</span>
+                                </a>
+                            </div>
+                            <a href="https://portswigger.net/solutions" class="chevron-after" data-ga-click-label="solutions-all">View all solutions</a>
+                        </div>
+
+                        <div>
+                            <div class="container-cards-lists-white">
+                                <a href="https://portswigger.net/burp/enterprise/resources/enterprise-edition-vs-professional" data-ga-click-label="feature-product-burp-comparison">
+                                    <p><strong>Product comparison</strong></p>
+                                    <p>What's the difference between Pro and Enterprise Edition?</p>
+                                    <img src="./Hall of Fame - Web Security Academy_files/burp-suite.jpg" alt="Burp Suite Professional vs Burp Suite Enterprise Edition">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mega-nav-content mega-nav-content-6">
+                <div class="section-white-medium-no-padding">
+                    <div class="container-columns-66-percent-right">
+                        <div>
+                            <div class="container-columns">
+                                <a href="https://portswigger.net/support" class="link-block-white" data-ga-click-label="support-center">
+                                    <span><strong>Support Center</strong></span>
+                                    <span>Get help and advice from our experts on all things Burp.</span>
+                                </a>
+                                <a href="https://portswigger.net/burp/documentation" class="link-block-white" data-ga-click-label="support-documentation">
+                                    <span><strong>Documentation</strong></span>
+                                    <span>Tutorials and guides for Burp Suite.</span>
+                                </a>
+                                <a href="https://portswigger.net/burp/documentation/desktop/getting-started" class="link-block-white" data-ga-click-label="support-get-started-professional">
+                                    <span><strong>Get Started - Professional</strong></span>
+                                    <span>Get started with Burp Suite Professional.</span>
+                                </a>
+                                <a href="https://portswigger.net/burp/documentation/enterprise/getting-started" class="link-block-white" data-ga-click-label="support-get-started-enterprise">
+                                    <span><strong>Get Started - Enterprise</strong></span>
+                                    <span>Get started with Burp Suite Enterprise Edition.</span>
+                                </a>
+                                <a href="https://forum.portswigger.net/" class="link-block-white" data-ga-click-label="support-user-forum">
+                                    <span><strong>User Forum</strong></span>
+                                    <span>Get your questions answered in the User Forum.</span>
+                                </a>
+                                <a href="https://portswigger.net/burp/releases" class="link-block-white" data-ga-click-label="support-releases">
+                                    <span><strong>Downloads</strong></span>
+                                    <span>Download the latest version of Burp Suite.</span>
+                                </a>
+                            </div>
+                            <a href="https://portswigger.net/support" class="chevron-after" data-ga-click-label="support-all">Visit the Support Center</a>
+                        </div>
+
+                        <div>
+                            <div class="container-cards-lists-white">
+                                <a href="https://portswigger.net/burp/releases" data-ga-click-label="feature-burp-software-downloads">
+                                    <p><strong>Downloads</strong></p>
+                                    <p>Download the latest version of Burp Suite.</p>
+                                    <img src="./Hall of Fame - Web Security Academy_files/latest-burp-suite-software-download.jpg" alt="The latest version of Burp Suite software for download">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+        </header>
+        
+
+<section class="maincontainer hall-of-fame">
+    <div class="container is-flex">
+        <div class="maincol">
+            <div class="flex header">
+                <h1>
+                    Hall of fame                 </h1>
+                <div class="flex-left-bottom relative header__topic-button">
+                    <a class="btn" id="searchButton" rel="noreferrer">Choose topic</a>
+                    <div class="absolute dropdown-search--hidden dropdown-search" id="ddSearch">
+                        <div class="flex">
+                            <div class="search-box" id="searchBox">
+                                <img alt="Search" src="./Hall of Fame - Web Security Academy_files/ps-web-academy-mag-glass.svg">
+                                <input class="search-input" id="searchTerm">
+                            </div>
+                            <a class="btn close-btn" id="closeButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34 34">
+    <rect width="34" height="34"></rect>
+    <rect x="16.43" y="3.59" width="1.2" height="26.9" transform="translate(-7.06 17.03) rotate(-45)" fill="currentColor"></rect>
+    <rect x="3.59" y="16.36" width="26.9" height="1.2" transform="translate(-7 17.03) rotate(-45.03)" fill="currentColor"></rect>
+</svg>
+                            </a>
+                        </div>
+                        <div class="link-list margin-bottom-s" id="resultList">
+                            <a href="https://portswigger.net/web-security/hall-of-fame" id="searchAll" class="search-all-topics">All topics</a>
+                        <a title="Access control vulnerabilities" href="https://portswigger.net/web-security/hall-of-fame/access-control">Access control vulnerabilities</a><a title="Authentication" href="https://portswigger.net/web-security/hall-of-fame/authentication">Authentication</a><a title="Business logic vulnerabilities" href="https://portswigger.net/web-security/hall-of-fame/logic-flaws">Business logic vulnerabilities</a><a title="Clickjacking" href="https://portswigger.net/web-security/hall-of-fame/clickjacking">Clickjacking</a><a title="Cross-origin resource sharing (CORS)" href="https://portswigger.net/web-security/hall-of-fame/cors">Cross-origin resource sharing (CORS)</a><a title="Cross-site request forgery (CSRF)" href="https://portswigger.net/web-security/hall-of-fame/csrf">Cross-site request forgery (CSRF)</a><a title="Cross-site scripting" href="https://portswigger.net/web-security/hall-of-fame/cross-site-scripting">Cross-site scripting</a><a title="Directory traversal" href="https://portswigger.net/web-security/hall-of-fame/file-path-traversal">Directory traversal</a><a title="DOM-based vulnerabilities" href="https://portswigger.net/web-security/hall-of-fame/dom-based">DOM-based vulnerabilities</a><a title="File upload vulnerabilities" href="https://portswigger.net/web-security/hall-of-fame/file-upload">File upload vulnerabilities</a><a title="HTTP Host header attacks" href="https://portswigger.net/web-security/hall-of-fame/host-header">HTTP Host header attacks</a><a title="HTTP request smuggling" href="https://portswigger.net/web-security/hall-of-fame/request-smuggling">HTTP request smuggling</a><a title="Information disclosure" href="https://portswigger.net/web-security/hall-of-fame/information-disclosure">Information disclosure</a><a title="Insecure deserialization" href="https://portswigger.net/web-security/hall-of-fame/deserialization">Insecure deserialization</a><a title="JWT" href="https://portswigger.net/web-security/hall-of-fame/jwt">JWT</a><a title="OAuth authentication" href="https://portswigger.net/web-security/hall-of-fame/oauth">OAuth authentication</a><a title="OS command injection" href="https://portswigger.net/web-security/hall-of-fame/os-command-injection">OS command injection</a><a title="Server-side request forgery (SSRF)" href="https://portswigger.net/web-security/hall-of-fame/ssrf">Server-side request forgery (SSRF)</a><a title="Server-side template injection" href="https://portswigger.net/web-security/hall-of-fame/server-side-template-injection">Server-side template injection</a><a title="SQL injection" href="https://portswigger.net/web-security/hall-of-fame/sql-injection">SQL injection</a><a title="Web cache poisoning" href="https://portswigger.net/web-security/hall-of-fame/web-cache-poisoning">Web cache poisoning</a><a title="WebSockets" href="https://portswigger.net/web-security/hall-of-fame/websockets">WebSockets</a><a title="XML external entity (XXE) injection" href="https://portswigger.net/web-security/hall-of-fame/xxe">XML external entity (XXE) injection</a></div>
+                    </div>
+                </div>
+
+                    <h4 class="header__rank-header" id="currentUserRank">
+                        Your rank: # 186515
+                    </h4>
+
+                
+<form action="https://portswigger.net/web-security/hall-of-fame" id="__AjaxAntiForgeryForm" method="post"><input type="hidden" id="RequestVerificationToken" name="RequestVerificationToken" value="C0C6150FDBBADF2BBDAC3EF913C3BEA158044E491DCDFFE9F3A51C95A315E2C6E6455B10DA0928D668351E2E3678792DB427030B3E6CC3E198144935D5F73426"><input name="__RequestVerificationToken" type="hidden" value="CfDJ8KjjDzZnPmdMrln5AVZSstI6LaCKwwXTeA8Ijrdlhk5Qf0N3awXaiSJtYuW0MQU-Scqwm9lwZzeGvg7WwxYJ4LzJhdR4Fvdl9yQt-3IZYr08g6gCnKTreH7DFDFLSePTqMuLMqaKazyGRAYoBRbG4hk"></form>
+<div class="user-status flex-right-bottom" id="userStatus">
+        <div class="" id="ajaxUserStatus">
+                <div class="grey"><img alt="Ne" src="./Hall of Fame - Web Security Academy_files/ps-web-academy-anonymous-eye.svg"> You're showing as ANONYMOUS [<a class="grey" id="showMeButton">show yourself</a>]</div>
+        </div>
+        <noscript>
+<form action="/web-security/hall-of-fame/updateuserstatus?newStatus=True&amp;IsAjax=False" id="Form" method="post"><input type="hidden" id="RequestVerificationToken" name="RequestVerificationToken" value=C0C6150FDBBADF2BBDAC3EF913C3BEA158044E491DCDFFE9F3A51C95A315E2C6E6455B10DA0928D668351E2E3678792DB427030B3E6CC3E198144935D5F73426>                    <div class="grey"><img alt="Ne" src="/content/images/svg/ps-web-academy-anonymous-eye.svg"/> You're showing as anonymous [<input id="Show" init-actiontrigger="" name="ActionType" switchtype="" type="submit" value="Show yourself"/>]</div>
+</form>        </noscript>
+</div>
+            </div>
+
+            
+
+<div class="sharebuttoncontainer is-smallicons margin-bottom-m">
+    <a href="https://twitter.com/share?url=https%3a%2f%2fportswigger.net%2fweb-security%2fhall-of-fame&amp;text=Hall+of+Fame+-+Web+Security+Academy%0A" target="_blank" data-ga-click-label="twitter">
+        <span class="share-twitter ">
+            <span class="share-icon icon-ps-twitter"></span>
+            <span class="share-text">Twitter</span>
+        </span>
+    </a>
+    <a href="https://api.whatsapp.com/send?text=https%3a%2f%2fportswigger.net%2fweb-security%2fhall-of-fame" target="_blank" data-ga-click-label="whatsapp">
+        <span class="share-whatsapp ">
+            <span class="share-icon icon-ps-whatsapp"></span>
+            <span class="share-text">WhatsApp</span>
+        </span>
+    </a>
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fportswigger.net%2fweb-security%2fhall-of-fame" target="_blank" data-ga-click-label="facebook">
+        <span class="share-facebook ">
+            <span class="share-icon icon-ps-facebook"></span>
+            <span class="share-text">Facebook</span>
+        </span>
+    </a>
+    <a href="https://reddit.com/submit?url=https%3a%2f%2fportswigger.net%2fweb-security%2fhall-of-fame" target="_blank" data-ga-click-label="reddit">
+        <span class="share-reddit ">
+            <span class="share-icon icon-ps-reddit"></span>
+            <span class="share-text">Reddit</span>
+        </span>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fportswigger.net%2fweb-security%2fhall-of-fame" target="_blank" data-ga-click-label="linkedin">
+        <span class="share-linkedin ">
+            <span class="share-icon icon-ps-linkedin"></span>
+            <span class="share-text">LinkedIn</span>
+        </span>
+    </a>
+    <a href="mailto:?subject=Hall+of+Fame+-+Web+Security+Academy&amp;body=Hall+of+Fame+-+Web+Security+Academy%0A%0Ahttps://portswigger.net/web-security/hall-of-fame" data-ga-click-label="email">
+        <span class="share-email ">
+            <span class="share-icon icon-ps-email"></span>
+            <span class="share-text">Email</span>
+        </span>
+    </a>
+</div>
+
+
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">1</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Davit Karapetyan</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="12 Aug 2022  14:45:54 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">12 Aug 2022  14:45:54 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">2</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Andrew Perry</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="12 Aug 2022  15:16:54 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">12 Aug 2022  15:16:54 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">3</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anthony Hanel</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="12 Aug 2022  15:31:45 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">12 Aug 2022  15:31:45 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">4</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">ravr</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="12 Aug 2022  18:11:39 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">12 Aug 2022  18:11:39 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">5</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">MasterTan</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="12 Aug 2022  18:13:33 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">12 Aug 2022  18:13:33 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">6</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anthony Weems</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="12 Aug 2022  18:42:39 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">12 Aug 2022  18:42:39 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">7</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Patrick Sheehan</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  00:01:05 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  00:01:05 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">8</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Johnny Villarreal</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  02:44:36 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  02:44:36 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">9</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Hassy Vinod Eshan</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  02:52:31 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  02:52:31 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">10</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">AFTAB SAMA</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  08:08:48 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  08:08:48 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">11</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Tan Yong Tai</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  09:44:33 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  09:44:33 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">12</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Armando Nogueira Rio</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  11:00:12 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  11:00:12 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">13</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Daniel Li</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  16:00:15 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  16:00:15 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">14</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Niels Ingi</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  16:25:19 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  16:25:19 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">15</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">twypsy</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  16:55:54 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  16:55:54 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">16</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Daniel R. Plante</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="13 Aug 2022  20:37:52 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">13 Aug 2022  20:37:52 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">17</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Maksymilian Kubiak</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="14 Aug 2022  09:52:23 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">14 Aug 2022  09:52:23 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">18</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Xabier Marcos</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="14 Aug 2022  19:08:46 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">14 Aug 2022  19:08:46 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">19</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Sean T Murray</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="14 Aug 2022  21:04:20 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">14 Aug 2022  21:04:20 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">20</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Jari Järvenpää</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="15 Aug 2022  05:41:12 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">15 Aug 2022  05:41:12 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">21</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="15 Aug 2022  10:19:19 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">15 Aug 2022  10:19:19 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">22</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="15 Aug 2022  16:02:47 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">15 Aug 2022  16:02:47 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">23</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="15 Aug 2022  22:22:43 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">15 Aug 2022  22:22:43 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">24</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Noriaki Iwasaki</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="16 Aug 2022  03:37:16 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">16 Aug 2022  03:37:16 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">25</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Branko Brkic</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="16 Aug 2022  16:01:51 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">16 Aug 2022  16:01:51 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">26</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Sunny Wear</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="16 Aug 2022  20:42:27 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">16 Aug 2022  20:42:27 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">27</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="16 Aug 2022  21:40:54 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">16 Aug 2022  21:40:54 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">28</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="17 Aug 2022  18:03:00 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">17 Aug 2022  18:03:00 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">29</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Sampath</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="18 Aug 2022  05:04:28 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">18 Aug 2022  05:04:28 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">30</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Andrey Kozlov</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="18 Aug 2022  16:04:05 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">18 Aug 2022  16:04:05 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">31</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Alex Trudeau</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  01:52:24 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  01:52:24 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">32</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Ploutarchos</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  07:38:59 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  07:38:59 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">33</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">nu11secur1ty</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  07:58:08 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  07:58:08 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">34</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Satoshi Shinohara</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  08:04:33 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  08:04:33 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">35</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Pawel Zdunek</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  12:09:39 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  12:09:39 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">36</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  18:50:04 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  18:50:04 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">37</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Ashu</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="19 Aug 2022  20:18:52 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">19 Aug 2022  20:18:52 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">38</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Goushi Kayanuma</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="20 Aug 2022  04:24:09 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">20 Aug 2022  04:24:09 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">39</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="20 Aug 2022  11:17:51 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">20 Aug 2022  11:17:51 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">40</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Freiman Andrés Gómez </div>
+        </div>
+        <time class="row__time flex tooltip" datetime="20 Aug 2022  17:49:58 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">20 Aug 2022  17:49:58 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">41</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Moayad Almalat</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="21 Aug 2022  17:18:30 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">21 Aug 2022  17:18:30 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">42</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Dzmitry</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="22 Aug 2022  06:01:18 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">22 Aug 2022  06:01:18 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">43</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Tadashi Okabayashi</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="23 Aug 2022  13:20:13 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">23 Aug 2022  13:20:13 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">44</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="23 Aug 2022  15:30:31 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">23 Aug 2022  15:30:31 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">45</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">W4H33D</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="24 Aug 2022  09:13:50 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">24 Aug 2022  09:13:50 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">46</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="24 Aug 2022  11:58:52 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">24 Aug 2022  11:58:52 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">47</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Michael Sommer</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="24 Aug 2022  15:38:43 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">24 Aug 2022  15:38:43 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">48</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Rodrigo </div>
+        </div>
+        <time class="row__time flex tooltip" datetime="24 Aug 2022  16:42:08 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">24 Aug 2022  16:42:08 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">49</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="24 Aug 2022  22:56:08 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">24 Aug 2022  22:56:08 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border " role="row">
+    <div class="row__rank flex-center border-circle" role="cell">50</div>
+    <div class="row__level tooltip row__level__expert">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ex</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Expert</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Anonymous</div>
+        </div>
+        <time class="row__time flex tooltip" datetime="25 Aug 2022  14:09:51 UTC" role="cell">
+            <span class="row__time--solved hidden">Solved&nbsp;</span>
+            <span class="row__time--actual">25 Aug 2022  14:09:51 UTC</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">224</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>
+<div class="row flex border-rounded x-x-light-grey-border row--inverted" role="row">
+    <div class="row__rank flex-center border-circle" role="cell">186515</div>
+    <div class="row__level tooltip row__level__newbie">
+        
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ne</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+        <span class="tooltiptext">Newbie</span>
+    </div>
+    <div class="flex-wrap-wide">
+        <div class="row__user flex">
+            <div class="row__name" role="cell">Jesse Gonzalez</div>
+                <span class="you" role="cell">YOU</span>
+        </div>
+        <time class="row__time flex tooltip timeHistory" datetime="07 Sep 2022  06:07:13 UTC" role="cell">
+            <span class="row__time--solved">Solved&nbsp;</span>
+            <span class="row__time--actual">14 mins ago</span>
+        </time>
+    </div>
+    <div class="row__lab-count flex-center-bottom">
+        <div class="numeral" role="cell">1</div>
+        <div role="cell"> of 224</div>
+    </div>
+</div>        </div>
+        <div class="rightcol rightcol-boxes">
+            
+<input class="hidden" id="trackerpopup" type="checkbox">
+<div class="widgetcontainer-box is-twobtns academy-account-status pin-to-bottom" id="AcademyAccountStatusWidget">
+        <div class="flex">
+            <label class="open-progress visible-when-collapsed" for="trackerpopup" id="open-progress">&nbsp;</label>
+            <label class="close-progress hidden-when-collapsed" for="trackerpopup" id="close-progress">&nbsp;</label>
+            <svg class="expand-arrow" height="10" viewBox="0 0 17 10" width="17" xmlns="http://www.w3.org/2000/svg">
+                <polyline fill="none" points="1.03 9.11 9.01 1.14 16.96 9.11" stroke="#fff" stroke-miterlimit="10"></polyline>
+            </svg>
+            <h4>Track your progress</h4>
+        </div>
+        <div class="button-lozenge-container">
+            <label>Learning materials:</label>
+            <a class="button-lozenge" href="https://portswigger.net/web-security/all-materials">
+                <span>View all</span>
+            </a>
+        </div>
+
+<div class="progress-with-percent">
+    <svg class="progress-bar" height="25">
+        <rect x="0" y="20" class="percent" width="100%" height="5"></rect>
+        <rect x="0" y="20" width="0%" height="5" class="progression-bar"></rect>
+        <text x="0%" y="15">0%</text>
+    </svg>
+</div>        <hr>
+        <div class="button-lozenge-container">
+            <label>Vulnerability labs:</label>
+            <a class="button-lozenge" href="https://portswigger.net/web-security/all-labs">
+                <span>View all</span>
+            </a>
+        </div>
+
+<div class="progress-with-percent">
+    <svg class="progress-bar" height="25">
+        <rect x="0" y="20" class="percent" width="100%" height="5"></rect>
+        <rect x="0" y="20" width="0%" height="5" class="progression-bar"></rect>
+        <text x="0%" y="15">0%</text>
+    </svg>
+</div>        <hr>
+        <label>Level progress:</label>
+        <div class="flex">
+            
+
+<div class="apprentice-progress">
+    
+<div class="radial-with-total">
+    <div class="radial-text-element">
+        <div class="radial-text-element__progress">1</div>
+        <div class="radial-text-element__total">of 52</div>
+    </div>
+    <svg class="radial-meter" height="75%" viewBox="0 0 70 70" width="75%">
+        <g transform="rotate(-90 35 35)">
+            <circle cx="35" cy="35" r="32.5" fill="none" stroke="Black" stroke-width="5" class="radial-meter__full-ring">
+            </circle>
+            <circle cx="35" cy="35" r="32.5" fill="none" stroke="White" stroke-width="5" stroke-dasharray="204.20335" stroke-dashoffset="200.2763625" class="radial-meter__percent-ring">
+            </circle>
+        </g>
+    </svg>
+</div>
+    <div class="text-small x-light-grey">Apprentice</div>
+</div>
+            
+
+<div class="practitioner-progress">
+    
+<div class="radial-with-total">
+    <div class="radial-text-element">
+        <div class="radial-text-element__progress">0</div>
+        <div class="radial-text-element__total">of 137</div>
+    </div>
+    <svg class="radial-meter" height="75%" viewBox="0 0 70 70" width="75%">
+        <g transform="rotate(-90 35 35)">
+            <circle cx="35" cy="35" r="32.5" fill="none" stroke="Black" stroke-width="5" class="radial-meter__full-ring">
+            </circle>
+            <circle cx="35" cy="35" r="32.5" fill="none" stroke="White" stroke-width="5" stroke-dasharray="204.20335" stroke-dashoffset="204.20335" class="radial-meter__percent-ring">
+            </circle>
+        </g>
+    </svg>
+</div>
+    <div class="text-small x-light-grey">Practitioner</div>
+</div>
+            
+
+<div class="expert-progress">
+    
+<div class="radial-with-total">
+    <div class="radial-text-element">
+        <div class="radial-text-element__progress">0</div>
+        <div class="radial-text-element__total">of 35</div>
+    </div>
+    <svg class="radial-meter" height="75%" viewBox="0 0 70 70" width="75%">
+        <g transform="rotate(-90 35 35)">
+            <circle cx="35" cy="35" r="32.5" fill="none" stroke="Black" stroke-width="5" class="radial-meter__full-ring">
+            </circle>
+            <circle cx="35" cy="35" r="32.5" fill="none" stroke="White" stroke-width="5" stroke-dasharray="204.20335" stroke-dashoffset="204.20335" class="radial-meter__percent-ring">
+            </circle>
+        </g>
+    </svg>
+</div>
+    <div class="text-small x-light-grey">Expert</div>
+</div>
+        </div>
+        <hr>
+        <label>Your level:</label>
+        <div class="flex-columns">
+            <div class="flex">
+                <div class="margin-right-l lab-icon lab-level-display__newbie">
+                    
+<svg viewBox="0 0 57.45 57.45">
+    <text font-size="24" font-stretch="condensed" font-weight="bold" x="13.9" y="32.7">Ne</text>
+    <path d="M57.45,57.45H0V0H57.45ZM2,55.44H55.45V2H2Z"></path>
+    <rect height="6.26" width="2" x="6.87" y="7.54"></rect>
+    <rect height="2" width="26.08" x="15.68" y="42.06"></rect>
+    <rect height="2" width="12.49" x="22.48" y="46.81"></rect>
+</svg>
+                </div>
+                <div>
+                    <div class="lab-level-display__newbie">
+                        NEWBIE
+                    </div>
+                        <span class="x-light-grey small-lab-reminder">
+                            Solve 51 more labs to become an apprentice.
+                        </span>
+                </div>
+            </div>
+            <a class="hof-pointer lab-level-display__newbie chevron-after" href="https://portswigger.net/web-security/hall-of-fame">See where you rank on our Hall of Fame</a>
+        </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+<script src="./Hall of Fame - Web Security Academy_files/halloffame.js.download" nonce=""></script>
+
+        
+    <footer class="wrapper">
+        <div class="container">
+            <div>
+                <p>Burp Suite</p>
+                <a href="https://portswigger.net/burp/vulnerability-scanner">Web vulnerability scanner</a>
+                <a href="https://portswigger.net/burp">Burp Suite Editions</a>
+                <a href="https://portswigger.net/burp/releases">Release Notes</a>
+            </div>
+            <div>
+                <p>Vulnerabilities</p>
+                <a href="https://portswigger.net/web-security/cross-site-scripting">Cross-site scripting (XSS)</a>
+                <a href="https://portswigger.net/web-security/sql-injection">SQL injection</a>
+                <a href="https://portswigger.net/web-security/csrf">Cross-site request forgery</a>
+                <a href="https://portswigger.net/web-security/xxe">XML external entity injection</a>
+                <a href="https://portswigger.net/web-security/file-path-traversal">Directory traversal</a>
+                <a href="https://portswigger.net/web-security/ssrf">Server-side request forgery</a>
+            </div>
+            <div>
+                <p>Customers</p>
+                <a href="https://portswigger.net/organizations">Organizations</a>
+                <a href="https://portswigger.net/testers">Testers</a>
+                <a href="https://portswigger.net/developers">Developers</a>
+            </div>
+            <div>
+                <p>Company</p>
+                <a href="https://portswigger.net/about">About</a>
+                <a href="https://portswigger.net/news">PortSwigger News</a>
+                <a href="https://portswigger.net/careers">Careers</a>
+                <a href="https://portswigger.net/about/contact">Contact</a>
+                <a href="https://portswigger.net/legal">Legal</a>
+                <a href="https://portswigger.net/privacy">Privacy Notice</a>
+            </div>
+            <div>
+                <p>Insights</p>
+                <a href="https://portswigger.net/web-security">Web Security Academy</a>
+                <a href="https://portswigger.net/blog">Blog</a>
+                <a href="https://portswigger.net/research">Research</a>
+                <a href="https://portswigger.net/daily-swig">The Daily Swig</a>
+            </div>
+            <div>
+                <a href="https://portswigger.net/"><img src="./Hall of Fame - Web Security Academy_files/portswigger-logo.svg" alt="PortSwigger Logo" class="footer-logo"></a>
+                <a class="button-outline-blue-small camelcase" href="https://twitter.com/Burp_Suite" rel="noreferrer"><span class="icon-twitter"></span>  Follow us</a>
+                <p class="grey">© 2022 PortSwigger Ltd.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://portswigger.net/web-security/hall-of-fame#top" class="back-to-top allow-for-pinned"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><polygon points="4.07 14.7 5.03 15.78 12.48 9.13 19.94 15.78 20.9 14.7 12.48 7.2 4.07 14.7" fill="#f63"></polygon><path d="M13,0A13,13,0,1,0,26,13,13,13,0,0,0,13,0Zm0,24.56A11.56,11.56,0,1,1,24.56,13,11.58,11.58,0,0,1,13,24.56Z" fill="#f63"></path></svg></a>
+
+    
+</body></html>
